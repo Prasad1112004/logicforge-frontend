@@ -1,0 +1,52 @@
+# LogicForge Frontend
+
+A Next.js + React + TypeScript educational programming adventure game frontend for LogicForge: The Programmer's Brain.
+
+## Stack
+
+- Next.js App Router
+- React + TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## Local setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create a `.env.local` file if you want to talk to the Python FastAPI backend:
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1
+```
+
+3. Run the app:
+
+```bash
+npm run dev
+```
+
+Then open http://localhost:3000.
+
+## Features implemented
+
+- Guest onboarding flow
+- Byte companion panel
+- Mission and world map view
+- Challenge workspace with editor and result panel
+- Demo mode fallback when the backend is unavailable
+- LocalStorage persistence for guest progress
+- Reward and progression display
+- Responsive futuristic game UI
+
+## Backend note
+
+This frontend is designed to work with the Python FastAPI backend in the separate `logicforge-backend` repository. When the backend is unavailable, the app automatically falls back to a clearly labeled local demo mode without pretending the demo response is a real backend result.
+
+## Gameplay loop
+
+Open game → create guest profile → meet Byte → solve a challenge → receive feedback → earn rewards → unlock next mission → save progress → resume.
